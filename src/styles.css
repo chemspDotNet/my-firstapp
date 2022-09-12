@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+/* h1 { background-color:  orange;} */
+
+.box1 {
+    background-color: yellow;
+    text-decoration: underline;
+    border: 3px solid red;
+    }
