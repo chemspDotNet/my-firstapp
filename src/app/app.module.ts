@@ -16,7 +16,16 @@ import { DataService } from './services/data.service';
 import { HttpClientModule} from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { MyPipePipe } from './my-pipe.pipe'
+import { RouterModule, Routes } from '@angular/router';
+import { NotfoundComponent } from './notfound/notfound.component';
 
+
+  const appRoutes:Routes=[
+    { path:'home', component: HomeComponent}, 
+    {path: 'parent', component:ParentComponent},
+     {path:'', redirectTo:'/home', pathMatch:"full"},
+     {path:'**', component: NotfoundComponent}
+      ]
 
 @NgModule({
   declarations: [
@@ -36,7 +45,8 @@ import { MyPipePipe } from './my-pipe.pipe'
     AppRoutingModule,
     MyCustomModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
  
   providers: [ ],  // make sure to create instance of serive

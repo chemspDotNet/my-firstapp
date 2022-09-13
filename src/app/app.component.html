@@ -1,15 +1,10 @@
 <div class="container">
-    <h1>App Component</h1>
-    <app-test></app-test>
-
-
-    {{'sunil patel' | titlecase}}
-
-    {{date | date:'m/d/y'}}
-<br>
-    {{ 1234.56 | currency: 'EUR'}}
-  
-
-    {{'hello'|myPipe}}
+    <h1>Task Management System</h1>
+    <ul>
+        <li style="display: inline-block; margin:5px"  [routerLink]="home" >Home</li>
+        <li style="display: inline-block; margin:5px" [routerLink]="'parent'">Parent</li>
+    </ul>
+   <button type="button" class=" btn btn-primary" (click)="navigate()" > Navigate to Parent</button>
+    <router-outlet></router-outlet>
 
 </div>

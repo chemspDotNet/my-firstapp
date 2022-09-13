@@ -1,14 +1,14 @@
 <div style="border: 2px solid blue; height: auto;">
     <h4>Parent Component</h4>
 
-    <p>{{'Counter in Parent Comp : ' + counterInParent}}</p>
+    <!-- <p>{{'Counter in Parent Comp : ' + counterInParent}}</p>
     <p>{{'Counter in Parent Comp  from child : ' + mychild.counterInChild}}</p>
-
+ -->
 
     <button (click)="increment()"> Increment from Parent Comp</button> &nbsp;
     <button (click)="decrement()"> Decrement from Parent Comp</button>
 
-
-       <app-child #mychild [counterInChild] = "counterInParent" ></app-child>
+<!-- 
+       <app-child #mychild [counterInChild] = "counterInParent" ></app-child> -->
      
 </div>

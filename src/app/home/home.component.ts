@@ -10,7 +10,7 @@ import { Component, ViewEncapsulation } from "@angular/core";
 export class HomeComponent {
 
      title = "Hello Class. Welcome !!!"
-
+    home='home'
      flag = true;
 
      expression = 1;

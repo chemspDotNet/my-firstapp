@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError, filter, interval, map, Observable, of, pipe } from 'rxjs';
 import { AccountService } from './services/account.service';
 import { DataService } from './services/data.service';
@@ -11,15 +12,25 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent implements OnInit {
   
+  home='home'
     date= new Date();
 
-   constructor( ){  }
+   constructor( private router:Router){  }
 
   ngOnInit(): void {
 
   }
   
-
+  navigate(){
+    //login first
+    debugger
+    if(1==1){
+      // to parent
+      this.router.navigateByUrl('parent')
+    } else {
+      // stay on same page
+    }
+  }
 }
 
 
