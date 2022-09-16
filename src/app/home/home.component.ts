@@ -1,4 +1,6 @@
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { AccountService } from "../services/account.service";
 
 
 @Component({
@@ -7,11 +9,14 @@ import { Component, ViewEncapsulation } from "@angular/core";
     styleUrls:['./home.component.css' ],
     encapsulation: ViewEncapsulation.Emulated
 })
-export class HomeComponent {
+export class HomeComponent  implements OnInit{
 
      title = "Hello Class. Welcome !!!"
     home='home'
      flag = true;
+   
+     username= 'DotNetUser'
+     password = 'admin'
 
      expression = 1;
 
@@ -27,7 +32,14 @@ export class HomeComponent {
       {'name': 'Paul5', 'age': 24},
          ]
 
+         quotes;
 
+         constructor(private activatedroute:ActivatedRoute){ }
+
+         ngOnInit(): void {
+            debugger
+            this.quotes = this.activatedroute.snapshot.data['quotes'];
+         }
      getTitle(){
         let item = {'customerName': 'Paul'}
         //debugger
@@ -52,6 +64,13 @@ export class HomeComponent {
 
      incrementTestClass(){
       this.mystyle = {color:'red', 'border': '1px solid blue'};
+   }
+
+   sumbitForm(frmvalue: any){
+      debugger
+      let user = this.username;
+      let psswr = this.password;
+      // call api here
    }
 }
 

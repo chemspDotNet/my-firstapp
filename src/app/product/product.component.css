@@ -1,0 +1,14 @@
+.menu-item {
+   display: inline-block;
+   margin: 5px;
+   border:1px solid black;
+   border-radius: 5px;
+   background-color: blue;
+   color: white;
+   padding: 2px;
+}
+
+.menu-item:hover {
+    background-color: maroon;
+    color: white;
+ }

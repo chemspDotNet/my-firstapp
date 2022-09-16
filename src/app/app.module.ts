@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MyCustomModule } from './modules/my-custom.module';
+import {  MyMaterialModule } from './modules/my-material.module';
 import { TestDirective } from './directives/test.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { MyTestDirective } from './directives/my-test.directive';
@@ -16,16 +15,13 @@ import { DataService } from './services/data.service';
 import { HttpClientModule} from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { MyPipePipe } from './my-pipe.pipe'
-import { RouterModule, Routes } from '@angular/router';
-import { NotfoundComponent } from './notfound/notfound.component';
-
-
-  const appRoutes:Routes=[
-    { path:'home', component: HomeComponent}, 
-    {path: 'parent', component:ParentComponent},
-     {path:'', redirectTo:'/home', pathMatch:"full"},
-     {path:'**', component: NotfoundComponent}
-      ]
+import { AppRoutingModule } from './app-routing.module';
+import { ProductComponent } from './product/product.component';
+import { ProductMenu1Component } from './product/product-menu1/product-menu1.component';
+import { ProductMenu2Component } from './product/product-menu2/product-menu2.component';
+import { ProductMenu3Component } from './product/product-menu3/product-menu3.component';
+import { MyreactiveComponent } from './myreactive/myreactive.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,15 +34,24 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ChildComponent,
     LifeCycleComponent,
     TestComponent,
-    MyPipePipe
+    MyPipePipe, 
+    ProductComponent, 
+    ProductMenu1Component,
+    ProductMenu2Component,
+    ProductMenu3Component,
+    MyreactiveComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MyCustomModule,
+    
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MyMaterialModule
+
   ],
  
   providers: [ ],  // make sure to create instance of serive

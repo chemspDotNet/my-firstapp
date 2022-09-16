@@ -1,10 +1,15 @@
 
 <div style="border: 2px solid black; padding: 5px;">
-    <h1>product works!. Awesome</h1>
+    <h1>Product Home</h1>
 
-    {{customerInProduct |json}}
-
-
-    <button type="button" (click)="getDataTest()">Get Data</button>
-    {{testData}}
+    <ul>
+        <li class="menu-item" [routerLink]="'product-menu1'"> Product Menu 1</li>
+        <li class="menu-item" [routerLink]="'product-menu2'"> Product Menu 2</li>
+        <li class="menu-item" [routerLink]="'product-menu3'"> Product Menu 3</li>
+        
+        
+    </ul>
+    
+    <hr>
+    <router-outlet></router-outlet>
 </div>

@@ -19,6 +19,10 @@ export class TestComponent implements OnInit {
   }
 
 
+  logOut(){
+    localStorage.removeItem('token');
+  }
+
   login() {
     debugger
     this.account.Login().subscribe({

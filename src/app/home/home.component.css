@@ -9,3 +9,6 @@
 
 .even { background-color:  cyan;}
 .odd { background-color: brown; color:  white;}
+
+
+input.ng-touched.ng-invalid {border-bottom: 2px solid red;}

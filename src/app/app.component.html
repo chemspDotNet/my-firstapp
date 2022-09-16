@@ -1,10 +1,26 @@
 <div class="container">
     <h1>Task Management System</h1>
+    <button style="float: right;" type="button" class=" btn btn-primary" (click)="navigate()" > Navigate to Child</button>
+   
     <ul>
         <li style="display: inline-block; margin:5px"  [routerLink]="home" >Home</li>
-        <li style="display: inline-block; margin:5px" [routerLink]="'parent'">Parent</li>
+        <li style="display: inline-block; margin:5px"  [routerLink]="'reactive'" >Reactive Form</li>
+       
+        <li style="display: inline-block; margin:5px"  [routerLink]="['parent']">Parent</li>
+        <li style="display: inline-block; margin:5px"  [routerLink]="['product']">Product</li>
+        <li style="display: inline-block; margin:5px"  [routerLink]="['orders']">Orders</li>
+       
+        <li style="display: inline-block; margin:5px"  [routerLink]="['customers']">Customers</li>
+       
+        
+        <li style="display: inline-block; margin:5px" [routerLink]="['child', 100, 'Paul', 'NYC']">Child</li>
+        
     </ul>
-   <button type="button" class=" btn btn-primary" (click)="navigate()" > Navigate to Parent</button>
-    <router-outlet></router-outlet>
+    
+   <router-outlet></router-outlet>
+   
+
+   <mat-slider min="1" max="500" step="1" value="150"></mat-slider>
+   
 
 </div>

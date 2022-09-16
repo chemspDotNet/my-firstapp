@@ -14,19 +14,19 @@ export class AppComponent implements OnInit {
   
   home='home'
     date= new Date();
-
+  counter= 0;
    constructor( private router:Router){  }
 
   ngOnInit(): void {
 
   }
-  
+
   navigate(){
     //login first
     debugger
     if(1==1){
       // to parent
-      this.router.navigateByUrl('parent')
+      this.router.navigate(['child', 100, 'Sunil', 'Edison'], {queryParams: {'srNo': this.counter++}});
     } else {
       // stay on same page
     }
